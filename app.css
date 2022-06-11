@@ -1,0 +1,113 @@
+body{
+    --bs-body-color: hsl(0, 0%, 89%);
+    --bs-body-bg: black;
+    --bs-body-font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    width: 100%;
+}
+
+h1, h2{
+    font-family: 'Prata', sans-serif;
+    margin-top: 1rem;
+}
+p{
+    font-weight: 200;
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+    text-align: left;
+}
+.navbar{
+    --bs-navbar-color: hsl(0, 0%, 89%);;
+    --bs-navbar-brand-color: hsl(0, 0%, 89%);
+    --bs-navbar-nav-link-padding-x: 1rem;
+}
+
+.container, .container-fluid {
+    --bs-gutter-x: 5rem;
+    --bs-gutter-y: 2rem;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 1);
+    padding-left: calc(var(--bs-gutter-x) * 1);
+    padding-top: calc(var(--bs-gutter-y) * .5);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.navbar-brand{
+    font-size: .75rem;
+    transition: color 200ms ease;
+}
+.navbar-brand:hover{
+    color: rgb(73, 163, 236);
+    cursor: pointer;
+}
+.nav-link{
+    font-size: .75rem;
+    transition: color 200ms ease;
+}
+.nav-link:hover{
+    color: rgb(73, 163, 236);
+    cursor: pointer;
+    
+}
+.nav-link:focus{
+    color: rgb(141, 139, 139);
+    font-size: .8rem;
+}
+.navbar-nav{
+    margin: 0 auto;
+}
+a.nav-link{
+    padding: 0 35px;
+}
+.layer{
+    margin: 25px 0;
+}
+.padd{
+    margin-bottom: 35px;
+}
+.btn{
+    font-size: 14px;
+    --bs-btn-color: #212529;
+    --bs-btn-bg: yellow;
+    --bs-btn-border-radius: none;
+    transition: background-color 100ms ease-out
+}
+.btn:hover{
+    background-color: transparent;
+}
+.btn:focus{
+    background-color: rgb(226, 226, 73);
+    color: black;
+    border: 1px solid black;
+}
+.greyBg{
+    margin-top: 45px;
+    padding-top: 20px;
+    background-color: gray;
+}
+
+section .layer .row{
+    margin: 100px 0;
+}
+
+
+
+@media(max-width: 767px){
+    .navbar{
+        --bs-navbar-padding-y: 2rem;
+    }
+    .logos{
+        padding: 10px 25px;
+    }
+    .image-line{
+        width: 100%;
+    }
+    .container, .container-fluid {
+        --bs-gutter-x: 1rem;
+        --bs-gutter-y: .25rem;
+        padding-right: calc(var(--bs-gutter-x) * 1);
+        padding-left: calc(var(--bs-gutter-x) * 1);
+        padding-top: calc(var(--bs-gutter-y) * .25);
+    }
+}
