@@ -1,131 +1,300 @@
-body{
+* {
     margin: 0;
-    --bs-body-font-family: 'Inter', sans-serif;
-    min-height: 100vh;
-    width: 100%;
-    color: hsl(0, 0%, 89%);
+    padding: 0;
+    box-sizing: border-box;
+}
+body , a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    font-family: 'Inter', sans-serif
 }
 
-.container-fluid {
-    --bs-gutter-x: 5rem;
-    --bs-gutter-y: 2rem;
-    width: 100%;
-    padding-right: calc(var(--bs-gutter-x) * 1);
-    padding-left: calc(var(--bs-gutter-x) * 1);
-    padding-top: calc(var(--bs-gutter-y) * .5);
-    margin-right: auto;
-    margin-left: auto;
-}
-
-h1, h2{
+h1, h2, h3, h4 {
     font-family: 'Prata', sans-serif;
-    /*margin-top: 1rem;*/
-
 }
 
-h2{
-    font-size: 1.5rem;
-}
-
-p{
+h2 {
+    font-size: 1.6em;
     font-weight: 200;
-    font-size: 0.8rem;
-    line-height: 1.3rem;
-
+    margin: .7em 0;
 }
 
-/*--------------- NAVIGATION ----------------*/
-.navbar{
-    --bs-navbar-color: hsl(0, 0%, 89%);;
-    --bs-navbar-brand-color: hsl(0, 0%, 89%);
-    --bs-navbar-nav-link-padding-x: 1rem;
+p {
+    font-size: .85em;
+    line-height: 1.5;
+    font-weight: 200;
 }
 
-.navbar-brand{
-    font-size: .79rem;
-    font-family: 'Prata', sans-serif;
-    transition: color 200ms ease;
+main {
+    width: 100%;
+    background-color: rgba(0, 0, 0, .98);
+    padding: .5em .75em;
 }
 
-.navbar-brand:hover, .nav-link:hover{
-    color: rgb(73, 163, 236);
-    cursor: pointer;
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1em;
 }
 
-.navbar-brand:focus, .nav-link:focus{
-    color: rgb(141, 139, 139); 
+nav a, .navbar a {
+    font-size: .75em;
 }
 
-.nav-link{
-    font-size: .75rem;
-    transition: color 200ms ease;
+.hero {
+    margin-top: 4em;
 }
 
-.navbar-nav{
-    margin: 0 auto;
+.hero h1 {
+    margin-bottom: .25em;
+    font-size: 1.7em;
+    font-weight: 400;
 }
 
-a.nav-link{
-    padding: 0 35px;
+.brand-logo {
+    width: 80%;
+    margin: 4em auto 2em;
 }
 
-.nav-item{
-    font-weight: 100;
+.logos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
 }
 
-.btn{
-    font-size: 14px;
-    --bs-btn-color: #212529;
-    --bs-btn-bg: yellow;
-    --bs-btn-border-radius: none;
-    transition: background-color 100ms ease-out
+.logos li {
+    text-align: center;
 }
 
-.btn:hover{
-    background-color: transparent;
-    color: beige;
+.asset-logo {
+    width: 6.5em;
+    margin-bottom: 1.3em;
 }
 
-.btn:focus{
-    background-color: rgb(226, 226, 73);
+.get-access {
+    padding: 3em 0 4em;
+}
+
+.get-access-img {
+    width: 100%;
+    margin-top: 2.5em;
+}
+
+
+/*--------------- ARTICLE SECTION -------------------*/
+article{
+    width: 100%;
+    background-color: rgba(56, 56, 61, .99);
+    padding: .5em .75em;
+}
+
+.article-container {
+    padding-top: 4em;
+    padding-bottom: 3em;
+}
+
+.article-section-1 {
+    margin-bottom: 4em;
+}
+
+.article-section-1 p {
+    margin-top: 1.65em;
+}
+
+.article-section-2 p {
+    margin-top: 1.65em;
+}
+
+/**************** END OF ARTICLE ****************/
+
+/****************CALL TO ACTION SECTION **************/
+section {
+    width: 100%;
+    background-color: rgba(0, 0, 0, .98);
+    padding: 0 .75em;
+}
+
+.call-to-action {
+    padding-top: 3em;
+    padding-bottom: 4em;
+}
+
+.call-to-action p {
+    margin: 1.2em 0;
+}
+
+.btn {
+    padding: 1em 2em;
     color: black;
-    border: 1px solid black;
+    border: none;
+    background-color: rgba(255, 255, 0, .98);
+}
+/****************END OF SECTION ***********************/
+
+/*****************FOOTER ***************************/
+footer {
+    width: 100%;
+    background-color: rgba(56, 56, 61, .99);
+    padding: 1em 1em;
 }
 
-/*------------------- END OF NAVIGATION --------------------*/
-
-
-/*------------------- THIRD SECTION -----------------------*/
-.greyBg{
-    margin-top: 45px;
-    padding-top: 20px;
-    background-color: rgb(54, 54, 59);
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: .5em;
 }
 
+.social-links a {
+    padding: 0 .25em;
+}
 
-/*------------------ MEDIA QUERIES --------------------*/
-@media(max-width: 575px){
-    .container-fluid {
-        --bs-gutter-x: .5rem;
-        --bs-gutter-y: .125rem;
-        padding-right: calc(var(--bs-gutter-x) * .5);
-        padding-left: calc(var(--bs-gutter-x) * .5);
-        padding-top: calc(var(--bs-gutter-y) * .5);
+.icons {
+    width: 1.3em;
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        padding: 2em;
+    }
+
+    .hero h1 {
+        font-size: 3.5em;
+    }
+
+    .logos {
+        grid-template-columns: repeat(3, 1fr);
+        margin: auto;
+    }
+
+    .brand-logo {
+        width: 90%;
+    }
+
+    article, section {
+        padding: 0 2em;
+    }
+    
+    .get-access-img {
+        margin-top: 3.5em;
+    }
+
+    .article-section-1 h2 {
+        font-size: 2.3em;
+    }
+    
+    .call-to-action {
+       width: 80%;
+    }
+
+    .call-to-action h2 {
+        font-size: 2em;
+    }
+
+    .call-to-action p {
+        font-size: .9em;
+    }
+
+    footer {
+        padding:1em 2em;
+    }
+
+    .brand-logo {
+        padding-top: 2em;
+    }
+
+    .get-access {
+        padding: 0;
     }
 }
 
-@media(max-width: 767px){
-    .container-fluid {
-        --bs-gutter-x: 1rem;
-        --bs-gutter-y: .25rem;
+
+/*************MEDIA QUERY FOR DESKTOP DEVICES***************/
+@media screen and (min-width: 1024px) {
+    main {
+        padding: 2.5em 4em;
     }
-    .image-line{
+
+    .hero {
+        width: 70%;
+    }
+
+    .hero h1 {
+        font-size: 3em;
+    }
+
+    .hero p {
+        width: 90%;
+    }
+
+    .brand-logo {
         width: 100%;
     }
-}
 
-@media(max-width: 991px){
-    .container-fluid {
-        --bs-gutter-x: 2rem;   
+    .logos {
+        display: flex;
+        margin: auto;
+        justify-content: space-between;
+        align-items: center;
     }
+
+    article {
+        padding: 0 4em;
+    }
+    .get-access, .article-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3.5rem;
+    }
+
+    .article-container {
+        padding: 2em 0;
+    }
+
+    .article-section-1 h2 {
+        font-size: 1.7em;
+    }
+
+    section {
+        padding: 0 4em;
+    }
+
+    .call-to-action {
+        width: 45%;
+    }
+
+    .call-to-action h2 {
+        font-size: 1.8em;
+    }
+
+    .call-to-action p {
+        font-size: .8em;
+        width: 90%;
+    }
+
+    footer {
+        padding: 1em 4em;
+    }
+
+    .icons {
+        width: 1.5em;
+    }
+
+    .btn {
+       cursor: pointer;
+       transition: all .5s ease;
+    }
+
+    .btn:hover {
+        background-color: transparent;
+        border: 1px solid rgba(255, 255, 0, .98);
+        color: rgba(255, 255, 0, .98);
+    }
+
+    .btn:focus {
+        background-color: rgba(255, 255, 0, .5);
+    }
+
+
 }
